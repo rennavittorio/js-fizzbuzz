@@ -9,13 +9,16 @@
 
 
 for (let i = 0; i < 100; i++){
-    let restThree = (i + 1) % 3;
-    let restFive = (i + 1) % 5;
+    let num = i + 1;
 
-    if (i < 2) {
-        console.log(i + 1);
+    if (num < 3) {
+        console.log(num);
+
     } else {
-        
+
+        let restThree = num % 3;
+        let restFive = num % 5;
+
         if (restThree === 0 && restFive === 0){
             console.log('FizzBuzz');
         } else if (restThree === 0 && restFive !== 0){
@@ -23,8 +26,9 @@ for (let i = 0; i < 100; i++){
         } else if (restThree !== 0 && restFive === 0) {
             console.log('Buzz');
         } else {
-            console.log(i + 1);
+            console.log(num);
         }
 
     }
+
 }
