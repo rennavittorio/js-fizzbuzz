@@ -6,13 +6,15 @@
 // e per i multipli di 5 stampi “Buzz”.
 // Per i numeri che sono sia multipli di 3 che di 5 stampi (quindi multipli di 15) “FizzBuzz”.
 
-
+const myDoc = document.querySelector('body');
+// console.log(myDoc);
 
 for (let i = 0; i < 100; i++){
     let num = i + 1;
 
     if (num < 3) {
-        console.log(num);
+        // console.log(num);
+        myDoc.innerHTML += '<p>' + num + '</p>';
 
     } else {
 
@@ -20,13 +22,17 @@ for (let i = 0; i < 100; i++){
         let restFive = num % 5;
 
         if (restThree === 0 && restFive === 0){
-            console.log('FizzBuzz');
+            // console.log('FizzBuzz');
+            myDoc.innerHTML += '<p>FizzBuzz</p>';
         } else if (restThree === 0 && restFive !== 0){
-            console.log('Fizz');
+            // console.log('Fizz');
+            myDoc.innerHTML += '<p>Fizz</p>';
         } else if (restThree !== 0 && restFive === 0) {
-            console.log('Buzz');
+            // console.log('Buzz');
+            myDoc.innerHTML += '<p>Buzz</p>';
         } else {
-            console.log(num);
+            // console.log(num);
+            myDoc.innerHTML += '<p>' + num + '</p>';
         }
 
     }
