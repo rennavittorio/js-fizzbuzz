@@ -7,34 +7,22 @@
 // Per i numeri che sono sia multipli di 3 che di 5 stampi (quindi multipli di 15) “FizzBuzz”.
 
 const myDoc = document.querySelector('body');
-// console.log(myDoc);
 
 for (let i = 0; i < 100; i++){
     let num = i + 1;
+    let message = num;
 
-    if (num < 3) {
-        // console.log(num);
-        myDoc.innerHTML += '<p>' + num + '</p>';
+    let caseThree = num % 3;
+    let caseFive = num % 5;
 
-    } else {
-
-        let restThree = num % 3;
-        let restFive = num % 5;
-
-        if (restThree === 0 && restFive === 0){
-            // console.log('FizzBuzz');
-            myDoc.innerHTML += '<p>FizzBuzz</p>';
-        } else if (restThree === 0 && restFive !== 0){
-            // console.log('Fizz');
-            myDoc.innerHTML += '<p>Fizz</p>';
-        } else if (restThree !== 0 && restFive === 0) {
-            // console.log('Buzz');
-            myDoc.innerHTML += '<p>Buzz</p>';
-        } else {
-            // console.log(num);
-            myDoc.innerHTML += '<p>' + num + '</p>';
-        }
-
+    if (caseThree === 0 && caseFive === 0){
+        message = 'FizzBuzz';
+    } else if (caseThree === 0 && caseFive !== 0){
+        message = 'Fizz';
+    } else if (caseThree !== 0 && caseFive === 0) {
+        message = 'Buzz';
     }
 
+    myDoc.innerHTML += '<div>' + message + '</div>'
+    // console.log(message);
 }
